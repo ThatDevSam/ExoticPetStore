@@ -94,8 +94,8 @@ function SingleProduct () {
                                         {name}
                                     </Typography>
                                 </Grid>
-                                <Grid container item xs={12} columnSpacing={1} rowGap={2} sx={{display: 'flex', justifyContent: {xs: 'center', md: 'start'}, alignItems: 'center'}}>
-                                    <Grid item xs={12} sm={4} sx={{ display: 'flex', justifyContent: {xs: 'center', md: 'start'}, alignItems: 'center'}}>
+                                <Grid container item xs={12} columnSpacing={2} columnGap={{xs: 2, md: 0}} rowGap={2} sx={{display: 'flex', justifyContent: {xs: 'center', md: 'start'}, alignItems: 'center'}}>
+                                    <Grid item xs={12} lg={4} sx={{ display: 'flex', justifyContent: {xs: 'center', md: 'start'}, alignItems: 'center'}}>
                                         <Typography variant='h4' sx={{display: 'inline-flex', color: 'red', mr: 2, fontWeight: 'bold'}}>
                                             ${salesPrice}
                                         </Typography>
@@ -103,7 +103,7 @@ function SingleProduct () {
                                             ${price}
                                         </Typography>
                                     </Grid>
-                                    <Grid item xs={12} sm={6} sx={{display: 'flex', justifyContent: {xs: 'center', md: 'start'}, alignItems: 'center'}}>
+                                    <Grid item xs={12} lg={4} sx={{display: 'flex', justifyContent: {xs: 'center', md: 'start'}, alignItems: 'center'}}>
                                         <Typography variant='h5' sx={{fontWeight: 'bold'}}>
                                             Free Shipping: {freeShipping ? 'Yes' : 'No'}
                                         </Typography>
@@ -137,7 +137,7 @@ function SingleProduct () {
                                             <span style={{fontWeight: 'bold'}}>Species: </span>{species}
                                         </Typography>
                                     </Grid>
-                                    <Grid item xs={12} sm={6} sx={{display:'flex', justifyContent: {xs: 'center', md: 'start'}, alignItems: 'center'}}>
+                                    <Grid item xs={12} sx={{display:'flex', justifyContent: {xs: 'center', md: 'start'}, alignItems: 'center'}}>
                                         <Typography variant='subtitle1' sx={{textTransform: 'capitalize'}}>
                                             <span style={{fontWeight: 'bold'}}>Classification: </span>{classification}
                                         </Typography>
