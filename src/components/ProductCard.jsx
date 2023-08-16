@@ -39,30 +39,26 @@ function ProductCard (props) {
                     />
                     <CardContent>
                         <Grid container sx={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                            <Grid item xs={4} sm={6} sx={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                            <Grid item xs={12} sx={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                                 <Typography variant="subtitle1" sx={{textTransform: 'capitalize', fontWeight: 'bold'}}>
                                     {props.name}
                                 </Typography>
                             </Grid>
-                            <Grid item xs={3} sm={3} sx={{display :(sale > 0) ? 'flex' : 'none', justifyContent: 'start', alignItems: 'center'}}>
+                            {/* If there is a sale show the sales price. */}
+                            <Grid item xs={12} sm={4} md={6} lg sx={{display :(sale > 0) ? 'flex' : 'none', justifyContent:{xs: 'center', sm: 'end', lg: 'end'}, alignItems: 'center'}}>
                                 <Typography variant='h6' sx={{color: 'red', fontWeight: 'bold'}}>
                                     ${salesPrice}
                                 </Typography>
                             </Grid>
-                            <Grid item xs={3} sm={3} sx={{display :(sale > 0) ? 'none' : 'flex', justifyContent: 'start', alignItems: 'center'}}>
+                            {/* If there is no sale display the price normally */}
+                            <Grid item xs={12} sm={6} sx={{display :(sale > 0) ? 'none' : 'flex', justifyContent: 'center', alignItems: 'center'}}>
                                 <Typography variant="h6" sx={{color: theme.palette.green.dark, fontWeight: 'bold'}}>
                                     {`$${props.price}`}
                                 </Typography>
 
-
-                                {/* <Typography variant='h6' sx={{display: 'inline-flex', color: 'red', mr: 2, fontWeight: 'bold'}}>
-                                            ${salesPrice}
-                                        </Typography>
-                                        <Typography variant='h6' sx={{display: 'inline-flex', color: 'grey', textDecoration: 'line-through', fontWeight: 'bold'}}>
-                                            ${props.price}
-                                        </Typography> */}
                             </Grid>
-                            <Grid item xs={3} sm={3} sx={{display :(sale > 0) ? 'flex' : 'none', justifyContent: 'start', alignItems: 'center'}}>
+                            {/* If there is a sale display the product price with these styles */}
+                            <Grid item xs={12} sm={4} md={6} sx={{display :(sale > 0) ? 'flex' : 'none', justifyContent: {xs:'center', lg: 'start'}, alignItems: 'center', ml: {sm: 0, lg: 2}}}>
                                 <Typography variant='h6' sx={{color: 'grey', textDecoration: 'line-through', fontWeight: 'bold'}}>
                                     ${props.price}
                                 </Typography>
