@@ -8,7 +8,7 @@ function Home () {
     return(
         <main>
             <Hero />
-            <FeaturedProducts numOfProducts={4} />
+            <FeaturedProducts numOfProducts={5} />
             <NewsLetter />
             <Contact />
         </main>
