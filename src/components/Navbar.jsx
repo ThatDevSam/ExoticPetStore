@@ -22,8 +22,10 @@ import PersonIcon from '@mui/icons-material/Person'
 import { useTheme } from '@mui/material/styles'
 import { Link } from 'react-router-dom'
 
+//Links displayed on the navbar and in the mobile menu.
 const pages = [
   {name: 'Home', link: '/'},
+  {name: 'Products', link: '/products'},
 ]
 const settings = ['Profile', 'Account', 'Logout']
 
