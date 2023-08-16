@@ -54,8 +54,6 @@ function SingleProduct () {
     }, [isLoading, isSuccess, isError])
 
     if(isSuccess){
-        console.log(data)
-
         const{
             name,
             price,
@@ -99,7 +97,7 @@ function SingleProduct () {
                                         <Typography variant='h4' sx={{display: 'inline-flex', color: 'red', mr: 2, fontWeight: 'bold'}}>
                                             ${salesPrice}
                                         </Typography>
-                                        <Typography variant='h5' sx={{display: 'inline-flex', color: 'grey', textDecoration: 'line-through', fontWeight: 'bold'}}>
+                                        <Typography variant='h5' sx={{display: (sale > 0 ? 'inline-flex' : 'none'), color: 'grey', textDecoration: 'line-through', fontWeight: 'bold'}}>
                                             ${price}
                                         </Typography>
                                     </Grid>
