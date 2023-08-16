@@ -35,7 +35,7 @@ function ProductCard (props) {
                     <CardContent>
                         <Grid container sx={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                             <Grid item xs={6} sm={8} sx={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                                <Typography variant="h6">
+                                <Typography variant="h6" sx={{textTransform: 'capitalize'}}>
                                     {props.name}
                                 </Typography>
                             </Grid>

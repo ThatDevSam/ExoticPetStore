@@ -9,7 +9,7 @@ import{
     Button,
 } from '@mui/material'
 import { useTheme } from '@mui/material/styles'
-import { useGetFeaturedProductsQuery, useGetSingleProductImageQuery } from '../reduxstore/apiSlice'
+import { useGetFeaturedProductsQuery} from '../reduxstore/apiSlice'
 import ProductCard from './ProductCard'
 import Underline from './sectionHeaderUnderline'
 
@@ -84,7 +84,7 @@ function FeaturedProducts(props) {
 
                             <Grid item xs={12} sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: 1}}>
                                 <Typography variant='h4' sx={{textTransform: 'capitalize', fontWeight: 'bold'}}>
-                                    Our featured friends
+                                    Our featured friends & accessories
                                 </Typography>
                             </Grid>
 
