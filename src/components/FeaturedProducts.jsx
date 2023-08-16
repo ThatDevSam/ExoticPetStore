@@ -63,6 +63,7 @@ function FeaturedProducts(props) {
                 height={200}
                 name={animal.name}
                 price={animal.price}
+                sale={animal?.salesAmount.$numberDecimal}
                 key={animal.id}
             />
         )      
