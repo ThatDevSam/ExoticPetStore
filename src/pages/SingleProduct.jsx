@@ -54,6 +54,7 @@ function SingleProduct () {
     }, [isLoading, isSuccess, isError])
 
     if(isSuccess){
+        console.log(data)
         const{
             name,
             price,
@@ -140,6 +141,11 @@ function SingleProduct () {
                                             <span style={{fontWeight: 'bold'}}>Classification: </span>{classification}
                                         </Typography>
                                     </Grid>
+                                    <Grid item xs={12} sx={{display:'flex', justifyContent: {xs: 'center', md: 'start'}, alignItems: 'center'}}>
+                                        <Typography variant='subtitle1' sx={{textTransform: 'capitalize'}}>
+                                            <span style={{fontWeight: 'bold'}}>In Stock: </span>{(Inventory > 0 ? 'Yes': 'No')}
+                                        </Typography>
+                                    </Grid>
                                 </Grid>
 
                                 {/* Advanced accessory product details */}
@@ -157,6 +163,11 @@ function SingleProduct () {
                                     <Grid item xs={12} sm={6} sx={{display:'flex', justifyContent: {xs: 'center', md: 'start'}, alignItems: 'center'}}>
                                         <Typography variant='subtitle1'>
                                             <span style={{fontWeight: 'bold'}}>Brand: </span> {brand}
+                                        </Typography>
+                                    </Grid>
+                                    <Grid item xs={12} sx={{display:'flex', justifyContent: {xs: 'center', md: 'start'}, alignItems: 'center'}}>
+                                        <Typography variant='subtitle1' sx={{textTransform: 'capitalize'}}>
+                                            <span style={{fontWeight: 'bold'}}>In Stock: </span>{(Inventory > 0 ? 'Yes': 'No')}
                                         </Typography>
                                     </Grid>
                                 </Grid>
