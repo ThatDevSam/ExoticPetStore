@@ -9,11 +9,16 @@ import {
 }from '@mui/material/'
 import { Link } from 'react-router-dom';
 import { useTheme } from '@mui/material/styles'
+import calcSalesPrice from '../util/calcSalesPrice';
 
 function ProductCard (props) {
 
     //Initialize theme from the theme provider.
     const theme = useTheme()
+
+    const {sale} = props
+
+    let salesPrice = calcSalesPrice(props.price, sale)
 
     return(
         <>
@@ -34,16 +39,35 @@ function ProductCard (props) {
                     />
                     <CardContent>
                         <Grid container sx={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                            <Grid item xs={6} sm={8} sx={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                                <Typography variant="h6" sx={{textTransform: 'capitalize'}}>
+                            <Grid item xs={4} sm={6} sx={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                                <Typography variant="subtitle1" sx={{textTransform: 'capitalize', fontWeight: 'bold'}}>
                                     {props.name}
                                 </Typography>
                             </Grid>
-                            <Grid item xs={6} sm={4} sx={{display: 'flex', justifyContent: 'start', alignItems: 'center'}}>
+                            <Grid item xs={3} sm={3} sx={{display :(sale > 0) ? 'flex' : 'none', justifyContent: 'start', alignItems: 'center'}}>
+                                <Typography variant='h6' sx={{color: 'red', fontWeight: 'bold'}}>
+                                    ${salesPrice}
+                                </Typography>
+                            </Grid>
+                            <Grid item xs={3} sm={3} sx={{display :(sale > 0) ? 'none' : 'flex', justifyContent: 'start', alignItems: 'center'}}>
                                 <Typography variant="h6" sx={{color: theme.palette.green.dark, fontWeight: 'bold'}}>
                                     {`$${props.price}`}
                                 </Typography>
+
+
+                                {/* <Typography variant='h6' sx={{display: 'inline-flex', color: 'red', mr: 2, fontWeight: 'bold'}}>
+                                            ${salesPrice}
+                                        </Typography>
+                                        <Typography variant='h6' sx={{display: 'inline-flex', color: 'grey', textDecoration: 'line-through', fontWeight: 'bold'}}>
+                                            ${props.price}
+                                        </Typography> */}
                             </Grid>
+                            <Grid item xs={3} sm={3} sx={{display :(sale > 0) ? 'flex' : 'none', justifyContent: 'start', alignItems: 'center'}}>
+                                <Typography variant='h6' sx={{color: 'grey', textDecoration: 'line-through', fontWeight: 'bold'}}>
+                                    ${props.price}
+                                </Typography>
+                            </Grid>
+                            
                         </Grid>
                     </CardContent>
                 </CardActionArea>
