@@ -136,12 +136,12 @@ function SingleProduct () {
                                             <span style={{fontWeight: 'bold'}}>Species: </span>{species}
                                         </Typography>
                                     </Grid>
-                                    <Grid item xs={12} sx={{display:'flex', justifyContent: {xs: 'center', md: 'start'}, alignItems: 'center'}}>
+                                    <Grid item xs={12} sm={6} sx={{display:'flex', justifyContent: {xs: 'center', md: 'start'}, alignItems: 'center'}}>
                                         <Typography variant='subtitle1' sx={{textTransform: 'capitalize'}}>
                                             <span style={{fontWeight: 'bold'}}>Classification: </span>{classification}
                                         </Typography>
                                     </Grid>
-                                    <Grid item xs={12} sx={{display:'flex', justifyContent: {xs: 'center', md: 'start'}, alignItems: 'center'}}>
+                                    <Grid item xs={12} sm={6} sx={{display:'flex', justifyContent: {xs: 'center', md: 'start'}, alignItems: 'center'}}>
                                         <Typography variant='subtitle1' sx={{textTransform: 'capitalize'}}>
                                             <span style={{fontWeight: 'bold'}}>In Stock: </span>{(Inventory > 0 ? 'Yes': 'No')}
                                         </Typography>
@@ -165,7 +165,7 @@ function SingleProduct () {
                                             <span style={{fontWeight: 'bold'}}>Brand: </span> {brand}
                                         </Typography>
                                     </Grid>
-                                    <Grid item xs={12} sx={{display:'flex', justifyContent: {xs: 'center', md: 'start'}, alignItems: 'center'}}>
+                                    <Grid item xs={12} sm={6} sx={{display:'flex', justifyContent: {xs: 'center', md: 'start'}, alignItems: 'center'}}>
                                         <Typography variant='subtitle1' sx={{textTransform: 'capitalize'}}>
                                             <span style={{fontWeight: 'bold'}}>In Stock: </span>{(Inventory > 0 ? 'Yes': 'No')}
                                         </Typography>
