@@ -13,7 +13,8 @@ import {
   SharedLayout,
   Home,
   SingleProduct,
-  Error
+  Error,
+  Products,
 } from './pages'
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
             <Routes>
               <Route path='/' element={<SharedLayout/>}>
                 <Route index element={<Home/>}/>
+                <Route path="/products" element={<Products/>}/>
                 <Route path="/product/:id" element={<SingleProduct/>}/>
                 <Route path="*" element={<Error msg={'Oops! How did you end up all the way out here?'}/>}/>
               </Route>
