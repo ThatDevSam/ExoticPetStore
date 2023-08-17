@@ -31,7 +31,7 @@ function Contact() {
                                 <Underline />
                             </Grid>
                             <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                                <img src="./src/assets/HeroImages/MapImage.png" alt="map" />
+                                <img src="./src/assets/HeroImages/MapImage.png" alt="map" style={{borderRadius: '6px'}} />
                             </Grid>
                         </Grid>
                         {/* Contact and store hours seciton */}
