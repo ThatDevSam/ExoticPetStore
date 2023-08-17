@@ -75,17 +75,17 @@ function Hero() {
                         </Grid>
                         
                     </Grid>
-                    <Grid item xs={12} md={6} columnGap={{sm: 2,md: 10}}  sx={{bgcolor: theme.palette.green.light, display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                    <Grid item xs={12} md={6} columnGap={{sm: 2,md: 10}}  sx={{bgcolor: theme.palette.green.light, display: 'flex', justifyContent: 'center', alignItems: 'center', borderRadius: '6px'}}>
                         <ImageList sx={{ width: 500, height: 550 }} variant="woven" cols={3} gap={8}>
                             {picData.map((pic) => (
                                 <ImageListItem key={pic.id}>
-                                <img
-                                    src={`${pic.img}?w=161&fit=crop&auto=format`}
-                                    srcSet={`${pic.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
-                                    alt={pic.title}
-                                    loading="lazy"
-                                    style={{objectFit:'fill'}}
-                                />
+                                    <img
+                                        src={`${pic.img}?w=161&fit=crop&auto=format`}
+                                        srcSet={`${pic.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
+                                        alt={pic.title}
+                                        loading="lazy"
+                                        style={{objectFit:'fill', borderRadius: '6px'}}
+                                    />
                                 </ImageListItem>
                             ))}
                         </ImageList>
