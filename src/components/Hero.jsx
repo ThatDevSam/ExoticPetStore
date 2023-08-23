@@ -9,6 +9,7 @@ import{
     ImageListItem,
 } from '@mui/material'
 import { useTheme } from '@mui/material/styles'
+import { Link } from 'react-router-dom'
 
 const picData = [
     {
@@ -66,12 +67,14 @@ function Hero() {
                             </Typography>
                         </Grid>
                         <Grid item xs={12}  sx={{display:'flex', justifyContent:'center', alignItems: 'center',}}>
-                            <Button variant="contained" sx={{bgcolor: theme.palette.green.main,  ':hover': {bgcolor: 'white', color: theme.palette.green.main, borderColor: theme.palette.green.main, border: 'solid', }}}
-                            >
-                                <Typography variant='h5' sx={{fontWeight: 'bold',}}>
-                                    Shop Now
-                                </Typography>
-                            </Button>
+                            <Link to={'/products'}>
+                                <Button variant="contained" sx={{bgcolor: theme.palette.green.main,  ':hover': {bgcolor: 'white', color: theme.palette.green.main, borderColor: theme.palette.green.main, border: 'solid', }}}
+                                > 
+                                    <Typography variant='h5' sx={{fontWeight: 'bold',}}>
+                                        Shop Now
+                                    </Typography>
+                                </Button>
+                            </Link>
                         </Grid>
                         
                     </Grid>
