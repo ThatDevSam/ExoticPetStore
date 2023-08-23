@@ -21,9 +21,19 @@ export const apiSlice = createApi({
         query: (imgUrl) => {
             return `${imgUrl}`
         }
+    }),
+    getProducts: builder.query({
+        query: (searchParams) => {
+            return `/api/v1/products?${searchParams}`
+        }
     })
     
    })
 })
 
-export const {useGetFeaturedProductsQuery, useGetSingleProductQuery , useGetSingleProductImageQuery} = apiSlice
+export const {
+    useGetFeaturedProductsQuery, 
+    useGetSingleProductQuery, 
+    useGetSingleProductImageQuery,
+    useGetProductsQuery,
+} = apiSlice
