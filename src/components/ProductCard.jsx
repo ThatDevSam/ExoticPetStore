@@ -23,7 +23,7 @@ function ProductCard (props) {
     return(
         <>
             <Grid item xs={props.smallResponsivevalue} md={props.mediumResponsivedValue}>
-            <Card sx={{':hover': {boxShadow: '10px 10px 10px'}}}>
+            <Card sx={{':hover':{ opacity: '0.7'}}}>
                 <CardActionArea
                     component={Link}
                     to={`/product/${props.id}`}
@@ -35,9 +35,9 @@ function ProductCard (props) {
                     image={props.image}
                     alt={props.descrp}
                     width={props.width}
-                    sx={{ objectFit: 'contain', ':hover': {height: props.height + 15}}}
+                    sx={{ objectFit: 'contain' }}
                     />
-                    <CardContent>
+                    <CardContent >
                         <Grid container sx={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                             <Grid item xs={12} sx={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                                 <Typography variant="subtitle1" sx={{textTransform: 'capitalize', fontWeight: 'bold'}}>
