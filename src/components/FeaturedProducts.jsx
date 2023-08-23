@@ -94,7 +94,7 @@ function FeaturedProducts(props) {
                                 <Underline />
                             </Grid>
 
-                            <Grid container item md={12} sx={{mt: 1}} columnSpacing={6} rowSpacing={4}>
+                            <Grid container item md={12} sx={{mt: 1}} columnSpacing={4} rowSpacing={4}>
                                 {/* Display the content of the section based on the response from the db. */}
                                 {content}
                             </Grid>
