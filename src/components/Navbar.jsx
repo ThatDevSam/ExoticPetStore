@@ -141,7 +141,7 @@ function Navbar() {
                     onClick={handleCloseNavMenu}
                     aria-label={`${page.name}`}
                     size='large'
-                    sx={{ my: 2, color: 'white', display: 'block', ":hover": {fontSize: 18, textDecoration: 'underline'} }}
+                    sx={{ my: 2, color: 'white', display: 'block', ":hover": { textDecoration: 'underline'} }}
                     >
                       {page.name}
                     </Button>
